@@ -11,8 +11,9 @@
   background-repeat: no-repeat;
   background-position: 100% 100%;
   border-radius: 50px;
-  padding: 50px 60px;
-  height: 550px;
+  padding: 20px 30px;
+  max-height: 550px;
+  height: 100%;
   overflow-y: auto;
 
   &::-webkit-scrollbar {
@@ -32,15 +33,15 @@
   &__title {
     max-width: 597px;
     font-weight: 600;
-    font-size: 50px;
-    line-height: 70px;
+    font-size: 40px;
+    line-height: 40px;
     color: #000000;
   }
   &__subTitle {
     max-width: 540px;
     font-weight: 500;
-    font-size: 50px;
-    line-height: 55px;
+    font-size: 40px;
+    line-height: 40px;
     color: #000000;
   }
   &__form {
@@ -48,31 +49,16 @@
     flex-direction: column;
     &__title {
       font-weight: 700;
-      font-size: 40px;
-      line-height: 48px;
+      font-size: 30px;
+      line-height: 30px;
       color: #ffffff;
-      margin-top: 34px;
+      margin-top: 25px;
       margin-bottom: 19px;
     }
     &__button {
       max-width: 286px;
       width: 100%;
-      height: 73px;
-      margin-top: 34px;
-      background: $bg-dark-buttons;
-      border: 1px solid $bg-dark-buttons;
-      font-weight: 400;
-      font-size: 23px;
-      line-height: 29px;
-      color: #ffffff;
-      border-radius: 12px;
-      cursor: pointer;
-    }
-    &__button__disabled {
-      max-width: 286px;
-      opacity: 0.4;
-      width: 100%;
-      height: 73px;
+      height: 55px;
       margin-top: 34px;
       background: $bg-dark-buttons;
       border: 1px solid $bg-dark-buttons;
@@ -89,22 +75,11 @@
 @media (max-width: 1110px) {
   .modal__birth {
     max-width: 840px;
-    padding: 40px 50px;
-    &__title {
-      font-size: 45px;
-    }
     &__subTitle {
       max-width: 480px;
-      font-size: 45px;
     }
     &__form__title {
       font-size: 38px;
-    }
-    &__form__button {
-      height: 70px;
-    }
-    &__button__disabled {
-      height: 70px;
     }
   }
 }
@@ -112,7 +87,6 @@
 @media (max-width: 992px) {
   .modal__birth {
     width: calc(100% - 50px);
-    padding: 30px;
     border-radius: 30px;
     &__title {
       font-size: 39px;
@@ -125,11 +99,6 @@
       font-size: 34px;
     }
     &__form__button {
-      height: 60px;
-      font-size: 22px;
-    }
-    &__button__disabled {
-      height: 60px;
       font-size: 22px;
     }
   }
