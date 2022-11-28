@@ -12,6 +12,23 @@
   background-position: 100% 100%;
   border-radius: 50px;
   padding: 50px 60px;
+  height: 550px;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+
+  .input__email {
+    text-align: start;
+    padding: 0px 10px;
+  }
   &__title {
     max-width: 597px;
     font-weight: 600;
