@@ -10,6 +10,7 @@ const InputDate = ({ setDate, value }) => {
       max="5555-12-12"
       pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
       placeholder="DD/MM/YYYY"
+      required
       value={value}
       onChange={(e) => {
         setDate(e.target.value);

@@ -249,6 +249,7 @@ const ModalBirth = () => {
             className="input__date input__email"
             name="email"
             type="email"
+            required
             value={email}
             onChange={(e) => {
               setEmail(e.target.value);
