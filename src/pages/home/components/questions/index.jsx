@@ -1,9 +1,7 @@
 import "./Questions.scss";
 import sectionTwoBackgorund from "assets/sectionTwoBackgorund.png";
 import circle from "assets/circle.png";
-import vk from "assets/vk.png";
 import sectionTwoCenter from "assets/sectionTwoCenter.png";
-import sectionOneArrow from "assets/sectionOneArrow.png";
 const Questions = () => {
   return (
     <section className="section__two">
@@ -39,22 +37,6 @@ const Questions = () => {
           стоит ли на ней <br />
           оставаться?
         </p>
-        <div className="section__two__footer section__two__footer__hidde">
-          <div className="section__one__footer__telegram">
-            <img src={vk} alt="vk" className="section__one__footer__iconVK" />
-            <p className="section__one__footer__telegram__text">
-              Написать в Telegram
-            </p>
-          </div>
-          <button className="section__two__footer__button">
-            Купить курс за 1 руб
-            <img
-              src={sectionOneArrow}
-              alt="arrow"
-              className="section__one__footer__button__icon"
-            />
-          </button>
-        </div>
       </div>
       <div className="section__two__center">
         <div className="section__two__center__container">
@@ -116,22 +98,6 @@ const Questions = () => {
               путь, свое призвание
             </p>
           </div>
-        </div>
-        <div className="section__two__footer">
-          <div className="section__one__footer__telegram">
-            <img src={vk} alt="vk" className="section__one__footer__iconVK" />
-            <p className="section__one__footer__telegram__text">
-              Написать в Telegram
-            </p>
-          </div>
-          <button className="section__two__footer__button">
-            Купить курс за 1 руб
-            <img
-              src={sectionOneArrow}
-              alt="arrow"
-              className="section__one__footer__button__icon"
-            />
-          </button>
         </div>
       </div>
     </section>

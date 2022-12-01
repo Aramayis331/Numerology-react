@@ -39,7 +39,7 @@ const Сause = () => {
           <div className="section__six__top__right__itemOne">
             <img src={sectionSixHeart} alt="noPhoto" />
             <p className="section__six__top__right__item__text">
-              Чтобы они жили в гармонии с собой, работали в кайф на любимой
+              Чтобы люди жили в гармонии с собой, работали в кайф на любимой
               работе, в гармонии с миром и своими энергиями, научились слышать
               себя.
             </p>
