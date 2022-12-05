@@ -239,7 +239,7 @@ const ModalBirth = () => {
         </p>
         <form
           method="POST"
-          action="https://lk.phoenix32.ru/create.php"
+          action="https://lk.julia-spirina.ru/create.php"
           className="modal__birth__form"
         >
           <p className="modal__birth__form__title">Дата рождения</p>
