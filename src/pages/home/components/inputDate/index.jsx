@@ -1,21 +1,25 @@
+import { TextField } from "@mui/material";
+import { DesktopDatePicker, LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import "./InputDate.scss";
 
 const InputDate = ({ setDate, value }) => {
+  const handleChange = (newValue) => {
+    setDate(newValue);
+  };
+
   return (
-    <input
-      className="input__date"
-      name="date"
-      type="date"
-      min="1700-12-12"
-      max="5555-12-12"
-      pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
-      placeholder="DD/MM/YYYY"
-      required
-      value={value}
-      onChange={(e) => {
-        setDate(e.target.value);
-      }}
-    />
+    <LocalizationProvider dateAdapter={AdapterDayjs}>
+      <DesktopDatePicker
+        className="input__date"
+        inputFormat="MM/DD/YYYY"
+        value={value}
+        onChange={handleChange}
+        renderInput={(params) => (
+          <TextField name="date" autoComplete="off" {...params} />
+        )}
+      />
+    </LocalizationProvider>
   );
 };
 export default InputDate;

@@ -7,36 +7,26 @@ import BurgerMenu from "./components/burgerMenu";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleBurgerMenu = () => setIsOpen((prev) => !prev);
-
   return (
     <header>
       <nav>
-        <p className="header__number">+ 7999 099 99 81</p>
-        <a href="#" className="header__link">
-          Пункт меню
-        </a>
-        <a href="#" className="header__link">
-          Пункт меню
-        </a>
         <div>
           <img src={logo} alt="logo" />
         </div>
-        <a href="#" className="header__link">
-          Пункт меню
+        <a href="https://lk.julia-spirina.ru/">
+          <button className="header__button">Вход</button>
         </a>
-        <a href="#" className="header__link">
-          Пункт меню
-        </a>
-        <button className="header__button">Оставить заявку</button>
       </nav>
       <div className="burger__logo">
         <img src={logo} alt="logo" />
       </div>
-      <button className="burger" onClick={toggleBurgerMenu}>
+      <button className="burger">
         <MenuIcon className="burger__icon" />
       </button>
-      <BurgerMenu isOpen={isOpen} toggleBurgerMenu={toggleBurgerMenu} />
+      <a href="https://lk.julia-spirina.ru/" className="login">
+        <button className="header__button">Вход</button>
+      </a>
+      <BurgerMenu isOpen={isOpen} />
     </header>
   );
 };

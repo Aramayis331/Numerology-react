@@ -4,17 +4,28 @@ import { useNavigate } from "react-router-dom";
 import InputDate from "../inputDate";
 import { inputs } from "./data";
 import "./ModalBirth.scss";
+import { TextField } from "@mui/material";
 
 const ModalBirth = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState(null);
   const closeModal = () => navigate("/");
   const resultCalculator = (date) => {
+    console.log(date, "date");
+    // console.log(date.$d?.toDateString(), "data");
+    // console.log(date.$d?.getFullYear(), "getFullYear");
+    // console.log(date.$d?.getMonth() + 1, "getMonth");
+    // console.log(date.$d?.getDate(), "getDate");
+    // input date 2222-12-22
+    // date picker ?
     if (date) {
-      let oneWeek = date.split("-")[2];
-      let twoWeek = date.split("-")[1];
-      let threeWeek = date.split("-")[0];
+      // let oneWeek = date.split("-")[2];
+      // let twoWeek = date.split("-")[1];
+      // let threeWeek = date.split("-")[0];
+      let oneWeek = date.$d?.getDate();
+      let twoWeek = date.$d?.getMonth() + 1;
+      let threeWeek = date.$d?.toDateString();
       let oneTalent;
       let twoTalent;
       let threeTalent;
@@ -245,12 +256,19 @@ const ModalBirth = () => {
           <p className="modal__birth__form__title">Дата рождения</p>
           <InputDate value={date} setDate={setDate} />
           <p className="modal__birth__form__title">E-MAIL</p>
-          <input
+          <TextField
             className="input__date input__email"
+            id="outlined-basic"
+            variant="outlined"
             name="email"
-            type="email"
+            placeholder="email"
             required
+            type="email"
+            autoComplete="off"
             value={email}
+            inputProps={{
+              style: { WebkitBoxShadow: "transparent" },
+            }}
             onChange={(e) => {
               setEmail(e.target.value);
             }}

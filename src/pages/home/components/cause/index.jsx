@@ -1,5 +1,4 @@
 import "./Сause.scss";
-import sectionOneArrow from "assets/sectionOneArrow.png";
 import sectionSixBottom from "assets/sectionSixBottom.png";
 import sectionSixBackground from "assets/sectionSixBackground.png";
 import sectionSixumbrella from "assets/sectionSixumbrella.png";
@@ -7,8 +6,12 @@ import sectionSixHeart from "assets/sectionSixHeart.png";
 import sectionSixTopTwo from "assets/sectionSixTopTwo.png";
 import sectionSixTopOne from "assets/sectionSixTopOne.png";
 import sectionSixTopItem from "assets/sectionSixTopItem.png";
+import { useNavigate } from "react-router-dom";
 
 const Сause = () => {
+  const navigate = useNavigate();
+
+  const openModal = () => navigate("/birth");
   return (
     <section className="section__six">
       <div className="section__six__top">
@@ -52,14 +55,14 @@ const Сause = () => {
               дело мечты, расслабились и стали жить с мыслью: «Я на своём месте»
             </p>
           </div>
-          <button className="section__six__top__right__item__button">
-            Купить курс за 1 руб
-            <img
-              src={sectionOneArrow}
-              alt="arrow"
-              className="section__one__footer__button__icon"
-            />
-          </button>
+          <a className="section__six__top__right__itemTwo__button">
+            <button
+              className="section__six__top__right__item__button"
+              onClick={openModal}
+            >
+              Рассчитать на калькуляторе
+            </button>
+          </a>
         </div>
         <div className="section__six__top__backgorund">
           <img

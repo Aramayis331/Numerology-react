@@ -1,6 +1,4 @@
 import "./Footer.scss";
-import logo from "assets/logo.png";
-import sectionOneArrow from "assets/sectionOneArrow.png";
 
 const Footer = () => {
   return (

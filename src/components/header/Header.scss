@@ -37,9 +37,9 @@ nav {
   border: 1px solid #000000;
   border-radius: 7px;
   background-color: transparent;
-  padding: 14px 29px;
+  padding: 10px 29px;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 18px;
   color: #000000;
   cursor: pointer;
@@ -84,9 +84,10 @@ nav {
     cursor: pointer;
   }
   .burger {
+    display: none;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
+    // display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -123,8 +124,8 @@ nav {
   }
 
   .header__button {
-    padding: 11px 27px;
-    font-size: 14px;
+    padding: 8px 22px;
+    font-size: 15px;
   }
 
   .header__number {
@@ -135,6 +136,10 @@ nav {
   }
 }
 @media (max-width: 400px) {
+  .header__button {
+    padding: 5px 20px;
+    font-size: 14px;
+  }
   .burger__logo img {
     width: 70%;
   }
