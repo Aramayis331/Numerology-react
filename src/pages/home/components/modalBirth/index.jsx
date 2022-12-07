@@ -12,20 +12,10 @@ const ModalBirth = () => {
   const [date, setDate] = useState(null);
   const closeModal = () => navigate("/");
   const resultCalculator = (date) => {
-    console.log(date, "date");
-    // console.log(date.$d?.toDateString(), "data");
-    // console.log(date.$d?.getFullYear(), "getFullYear");
-    // console.log(date.$d?.getMonth() + 1, "getMonth");
-    // console.log(date.$d?.getDate(), "getDate");
-    // input date 2222-12-22
-    // date picker ?
     if (date) {
-      // let oneWeek = date.split("-")[2];
-      // let twoWeek = date.split("-")[1];
-      // let threeWeek = date.split("-")[0];
-      let oneWeek = date.$d?.getDate();
-      let twoWeek = date.$d?.getMonth() + 1;
-      let threeWeek = date.$d?.toDateString();
+      let oneWeek = date.$d?.getDate().toString();
+      let twoWeek = (date.$d?.getMonth() + 1).toString();
+      let threeWeek = date.$d?.getFullYear().toString();
       let oneTalent;
       let twoTalent;
       let threeTalent;
