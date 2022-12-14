@@ -1,12 +1,14 @@
 import Modal from "components/modal";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import InputDate from "../inputDate";
 import { inputs } from "./data";
 import "./ModalBirth.scss";
 import { TextField } from "@mui/material";
 
 const ModalBirth = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const clickId = searchParams.get("clickid");
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [date, setDate] = useState(null);
@@ -271,6 +273,7 @@ const ModalBirth = () => {
               value={resultCalculator(date)?.[key]}
             />
           ))}
+          <input name="clickId" readOnly hidden value={clickId} />
           <button className="modal__birth__form__button" type="submit">
             Отправить
           </button>

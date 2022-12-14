@@ -1,5 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import "./Weeks.scss";
 const Weeks = () => {
+  const navigate = useNavigate();
+  const openModal = () => navigate("/birth");
+
   return (
     <section className="section__five">
       <div className="section__five__left">
@@ -110,6 +114,11 @@ const Weeks = () => {
           описанием энергии вы получите список конкретных действий для
           прокачивания энергии, а также список профессий, которые вам подходят.
         </p>
+        <div className="section__four__header__buttons section__five__button">
+          <button className="section__four__header__button" onClick={openModal}>
+            Рассчитать на калькуляторе
+          </button>
+        </div>
       </div>
     </section>
   );
