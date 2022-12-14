@@ -4,12 +4,7 @@
 
 .modal__birth {
   .MuiInputBase-root {
-    font-size: 40px;
-    line-height: 67px;
     width: 100%;
-    height: 75px;
-    border-radius: 18px;
-    padding: 0px 10px;
   }
 }
 .input__date {
@@ -39,12 +34,6 @@
 }
 
 @media (max-width: 992px) {
-  .modal__birth {
-    .MuiInputBase-root {
-      height: 70px;
-      font-size: 35px;
-    }
-  }
   .input__date {
     height: 70px;
     font-size: 35px;
@@ -52,12 +41,6 @@
 }
 
 @media (max-width: 740px) {
-  .modal__birth {
-    .MuiInputBase-root {
-      height: 65px;
-      font-size: 30px;
-    }
-  }
   .input__date {
     height: 65px;
     font-size: 30px;
@@ -65,36 +48,18 @@
 }
 
 @media (max-width: 500px) {
-  .modal__birth {
-    .MuiInputBase-root {
-      height: 55px;
-      font-size: 28px;
-    }
-  }
   .input__date {
     height: 55px;
     font-size: 28px;
   }
 }
 @media (max-width: 430px) {
-  .modal__birth {
-    .MuiInputBase-root {
-      height: 50px;
-      font-size: 24px;
-    }
-  }
   .input__date {
     height: 50px;
     font-size: 24px;
   }
 }
 @media (max-width: 380px) {
-  .modal__birth {
-    .MuiInputBase-root {
-      height: 40px;
-      font-size: 20px;
-    }
-  }
   .input__date {
     height: 40px;
     font-size: 20px;

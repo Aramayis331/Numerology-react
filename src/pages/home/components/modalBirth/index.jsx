@@ -230,7 +230,18 @@ const ModalBirth = ({ clickId }) => {
       };
     }
   };
-
+  console.log(
+    resultCalculator(date)?.["oneWeek"] &&
+      resultCalculator(date)?.["twoWeek"] &&
+      resultCalculator(date)?.["threeWeek"] &&
+      resultCalculator(date)?.["fourWeek"] &&
+      resultCalculator(date)?.["fiveWeek"] &&
+      resultCalculator(date)?.["sixWeek"] &&
+      resultCalculator(date)?.["sevenWeek"] &&
+      resultCalculator(date)?.["eightWeek"] &&
+      resultCalculator(date)?.["nineWeek"] &&
+      resultCalculator(date)?.["tenWeek"]
+  );
   return (
     <Modal onClose={closeModal}>
       <div className="modal__birth">
@@ -272,7 +283,41 @@ const ModalBirth = ({ clickId }) => {
             />
           ))}
           <input name="clickid" readOnly hidden value={clickId} />
-          <button className="modal__birth__form__button" type="submit">
+          <button
+            style={{
+              opacity:
+                resultCalculator(date)?.["oneWeek"] &&
+                resultCalculator(date)?.["twoWeek"] &&
+                resultCalculator(date)?.["threeWeek"] &&
+                resultCalculator(date)?.["fourWeek"] &&
+                resultCalculator(date)?.["fiveWeek"] &&
+                resultCalculator(date)?.["sixWeek"] &&
+                resultCalculator(date)?.["sevenWeek"] &&
+                resultCalculator(date)?.["eightWeek"] &&
+                resultCalculator(date)?.["nineWeek"] &&
+                resultCalculator(date)?.["tenWeek"] &&
+                email
+                  ? "1"
+                  : "0.5",
+            }}
+            className="modal__birth__form__button"
+            type="submit"
+            disabled={
+              resultCalculator(date)?.["oneWeek"] &&
+              resultCalculator(date)?.["twoWeek"] &&
+              resultCalculator(date)?.["threeWeek"] &&
+              resultCalculator(date)?.["fourWeek"] &&
+              resultCalculator(date)?.["fiveWeek"] &&
+              resultCalculator(date)?.["sixWeek"] &&
+              resultCalculator(date)?.["sevenWeek"] &&
+              resultCalculator(date)?.["eightWeek"] &&
+              resultCalculator(date)?.["nineWeek"] &&
+              resultCalculator(date)?.["tenWeek"] &&
+              email
+                ? false
+                : true
+            }
+          >
             Отправить
           </button>
         </form>

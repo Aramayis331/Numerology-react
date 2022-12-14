@@ -11,8 +11,11 @@ const InputDate = ({ setDate, value }) => {
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <DesktopDatePicker
+        onAccept={(value) => {
+          console.log(value, "VALUE");
+        }}
         className="input__date"
-        inputFormat="MM/DD/YYYY"
+        inputFormat="DD/MM/YYYY"
         value={value}
         onChange={handleChange}
         renderInput={(params) => (
