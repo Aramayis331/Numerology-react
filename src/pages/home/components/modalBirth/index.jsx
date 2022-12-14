@@ -9,6 +9,7 @@ import { TextField } from "@mui/material";
 const ModalBirth = ({ clickId }) => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
   const [date, setDate] = useState(null);
   const closeModal = () => navigate("/");
   const resultCalculator = (date) => {
@@ -230,18 +231,6 @@ const ModalBirth = ({ clickId }) => {
       };
     }
   };
-  console.log(
-    resultCalculator(date)?.["oneWeek"] &&
-      resultCalculator(date)?.["twoWeek"] &&
-      resultCalculator(date)?.["threeWeek"] &&
-      resultCalculator(date)?.["fourWeek"] &&
-      resultCalculator(date)?.["fiveWeek"] &&
-      resultCalculator(date)?.["sixWeek"] &&
-      resultCalculator(date)?.["sevenWeek"] &&
-      resultCalculator(date)?.["eightWeek"] &&
-      resultCalculator(date)?.["nineWeek"] &&
-      resultCalculator(date)?.["tenWeek"]
-  );
   return (
     <Modal onClose={closeModal}>
       <div className="modal__birth">
@@ -255,7 +244,7 @@ const ModalBirth = ({ clickId }) => {
           className="modal__birth__form"
         >
           <p className="modal__birth__form__title">Дата рождения</p>
-          <InputDate value={date} setDate={setDate} />
+          <InputDate value={date} setDate={setDate} setError={setError} />
           <p className="modal__birth__form__title">E-MAIL</p>
           <TextField
             className="input__date input__email"
@@ -285,38 +274,11 @@ const ModalBirth = ({ clickId }) => {
           <input name="clickid" readOnly hidden value={clickId} />
           <button
             style={{
-              opacity:
-                resultCalculator(date)?.["oneWeek"] &&
-                resultCalculator(date)?.["twoWeek"] &&
-                resultCalculator(date)?.["threeWeek"] &&
-                resultCalculator(date)?.["fourWeek"] &&
-                resultCalculator(date)?.["fiveWeek"] &&
-                resultCalculator(date)?.["sixWeek"] &&
-                resultCalculator(date)?.["sevenWeek"] &&
-                resultCalculator(date)?.["eightWeek"] &&
-                resultCalculator(date)?.["nineWeek"] &&
-                resultCalculator(date)?.["tenWeek"] &&
-                email
-                  ? "1"
-                  : "0.5",
+              opacity: error === null && email && date ? "1" : "0.5",
             }}
             className="modal__birth__form__button"
             type="submit"
-            disabled={
-              resultCalculator(date)?.["oneWeek"] &&
-              resultCalculator(date)?.["twoWeek"] &&
-              resultCalculator(date)?.["threeWeek"] &&
-              resultCalculator(date)?.["fourWeek"] &&
-              resultCalculator(date)?.["fiveWeek"] &&
-              resultCalculator(date)?.["sixWeek"] &&
-              resultCalculator(date)?.["sevenWeek"] &&
-              resultCalculator(date)?.["eightWeek"] &&
-              resultCalculator(date)?.["nineWeek"] &&
-              resultCalculator(date)?.["tenWeek"] &&
-              email
-                ? false
-                : true
-            }
+            disabled={error === null && email && date ? false : true}
           >
             Отправить
           </button>
