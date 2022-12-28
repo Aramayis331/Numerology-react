@@ -6,9 +6,9 @@ const Footer = () => {
     <footer>
       <div className="footer__container">
         <div className="footer__item">
-          <p className="footer__item__header">ООО "КК ПОБЕДА"</p>
-          <p className="footer__item__link">ИНН: 1686010971</p>
-          <p className="footer__item__link">КПП: 168601001</p>
+          <p className="footer__item__header">ООО "ПСК-КРАН"</p>
+          <p className="footer__item__link">ИНН: 1655412920</p>
+          <p className="footer__item__link">КПП: 165501001</p>
           <p className="footer__item__link">info@roilead.ru</p>
         </div>
         <div className="footer__item">
