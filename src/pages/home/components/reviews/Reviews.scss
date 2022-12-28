@@ -57,6 +57,16 @@
   width: 90%;
   height: 100%;
 }
+.section__six__top__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section__seven {
+  .section__six__top__right__item__button {
+    margin-top: 20px;
+  }
+}
 
 /* slick */
 .section__seven {

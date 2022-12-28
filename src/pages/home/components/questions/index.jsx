@@ -2,7 +2,11 @@ import "./Questions.scss";
 import sectionTwoBackgorund from "assets/sectionTwoBackgorund.png";
 import circle from "assets/circle.png";
 import sectionTwoCenter from "assets/sectionTwoCenter.png";
+import { useNavigate } from "react-router-dom";
 const Questions = () => {
+  const navigate = useNavigate();
+
+  const openModal = () => navigate("/birth");
   return (
     <section className="section__two">
       <div className="section__two__left">
@@ -24,19 +28,33 @@ const Questions = () => {
             </p>
           </div>
         </div>
-        <p className="section__two__left__content__text">Где заработать больше?</p>
+        <p className="section__two__left__content__text">
+          Где заработать больше?
+        </p>
         <p className="section__two__left__content__text">
           Зачем я родился?
           <br />
           Тем ли я занимаюсь?
         </p>
-        <p className="section__two__left__content__text">Как вырасти в доходе?</p>
+        <p className="section__two__left__content__text">
+          Как вырасти в доходе?
+        </p>
         <p className="section__two__left__content__bottom__text">
           я ненавижу свою работу!
           <br />
           стоит ли на ней <br />
           оставаться?
         </p>
+        <div className="section__six__top__container">
+        <a className="section__six__top__right__itemTwo__button">
+          <button
+            className="section__six__top__right__item__button"
+            onClick={openModal}
+          >
+            Рассчитать на калькуляторе
+          </button>
+        </a>
+      </div>  
       </div>
       <div className="section__two__center">
         <div className="section__two__center__container">
@@ -98,6 +116,11 @@ const Questions = () => {
               путь, свое призвание
             </p>
           </div>
+        </div>
+        <div className="section__four__header__buttons section__five__button section__five__button___hidden">
+          <button className="section__four__header__button" onClick={openModal}>
+            Рассчитать на калькуляторе
+          </button>
         </div>
       </div>
     </section>

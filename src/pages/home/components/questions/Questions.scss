@@ -262,6 +262,11 @@
   }
 }
 
+@media (min-width: 1110px) {
+  .section__five__button___hidden {
+    display: none !important;
+  }
+}
 @media (max-width: 1110px) {
   .section__two__left__header__img {
     width: 95%;
@@ -277,6 +282,9 @@
     width: 100%;
     border-radius: unset;
     max-width: unset;
+    .section__six__top__right__item__button {
+      display: none;
+    }
   }
   .section__two__left__header__img {
     width: 32%;
@@ -299,6 +307,9 @@
     margin: 0px;
     padding: 20px;
     background: #e8d7c5;
+    .section__four__header__button {
+      background: #ffffff;
+    }
   }
   .section__two__right__rowOne,
   .section__two__right__rowFour,

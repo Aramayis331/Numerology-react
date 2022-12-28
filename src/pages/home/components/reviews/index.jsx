@@ -3,8 +3,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { items } from "./data";
+import { useNavigate } from "react-router-dom";
 
 const Reviews = () => {
+  const navigate = useNavigate();
+
+  const openModal = () => navigate("/birth");
+
   const settings = {
     dots: false,
     infinite: false,
@@ -49,6 +54,16 @@ const Reviews = () => {
             </div>
           ))}
         </Slider>
+      </div>
+      <div className="section__six__top__container">
+        <a className="section__six__top__right__itemTwo__button">
+          <button
+            className="section__six__top__right__item__button"
+            onClick={openModal}
+          >
+            Рассчитать на калькуляторе
+          </button>
+        </a>
       </div>
     </section>
   );
